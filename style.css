@@ -1,0 +1,275 @@
+:root {
+  --dark: #000;
+  --light: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body */
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--dark);
+  background-color: var(--light);
+  font-size: 16px;
+}
+
+/* Dark-mode */
+
+.dark-mode {
+  transition: 0.5s ease;
+  --light: #000;
+  --dark: #fff;
+}
+
+.light-mode {
+  transition: 0.5s ease;
+  --light: #fff;
+  --dark: #000;
+}
+
+.dark:hover {
+  cursor: pointer;
+}
+/* Container */
+
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 2px 15px;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 140px;
+  padding-top: 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+  list-style: none;
+}
+
+.navbar-name {
+  font-size: 18px;
+}
+
+.nav-link-a {
+  text-decoration: none;
+  color: var(--dark);
+}
+
+.nav-link {
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-link::after {
+  content: "";
+  width: 0;
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.6s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  border: 1px solid orange;
+}
+
+/* ABOUT */
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 100px;
+  margin-bottom: 140px;
+}
+
+.img {
+  width: 350px;
+  border-radius: 50%;
+  justify-self: end;
+  box-shadow: 0 2px 6px 0 #1c7ed6;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  justify-self: start;
+}
+
+.about-hello {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.about-name {
+  font-weight: 600;
+  font-size: 35px;
+  margin-bottom: 2px;
+}
+
+.about-role {
+  font-weight: 500;
+  font-size: 23px;
+  margin-bottom: 14px;
+}
+
+.about-msg {
+  /* list-style: none; */
+  display: flex;
+  font-size: 14px;
+  gap: 25px;
+  margin-bottom: 2px;
+}
+
+.about-logo {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 15px;
+}
+
+.about-linkedin {
+  width: 28px;
+  cursor: pointer;
+}
+
+.about-linkedin:hover,
+.about-github:hover {
+  width: 30px;
+  transition: 0.2s ease;
+}
+
+.about-linkedin-path {
+  fill: var(--dark);
+}
+
+.about-github {
+  cursor: pointer;
+}
+
+.about-github-path {
+  fill: var(--dark);
+}
+
+.about-resume {
+  font-size: 14px;
+  width: 90px;
+  height: 40px;
+  border-radius: 1000px;
+  border: none;
+  color: var(--light);
+  background-color: var(--dark);
+}
+
+.about-resume:hover {
+  cursor: pointer;
+}
+
+/* Project */
+
+.project {
+  margin-bottom: 100px;
+  display: grid;
+  justify-items: center;
+}
+
+.project h1 {
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+.project-card {
+  max-width: 900px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px 0 rgb(0, 0, 0, 0.45);
+}
+
+.project-card:hover {
+  cursor: pointer;
+}
+
+.project-meditation {
+  margin-bottom: 50px;
+}
+
+.project-meditation-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.project-calculator-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+/* Footer */
+
+.main-footer {
+  background-color: #000;
+  color: #fff;
+  height: 70px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-content: center;
+  padding: 0 80px;
+}
+
+.main-footer-links {
+  justify-self: end;
+  display: flex;
+  gap: 15px;
+}
+
+.main-footer-linkedin {
+  width: 28px;
+  cursor: pointer;
+}
+
+.main-footer-linkedin-path {
+  fill: #fff;
+}
+
+/* Animation */
+
+@keyframes slideLine {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+/* Breakpoint */
+
+@media screen and (max-width: 760px) {
+  .about {
+    gap: 30px;
+  }
+
+  .img {
+    justify-self: center;
+  }
+
+  .about-me {
+    justify-self: center;
+  }
+}
