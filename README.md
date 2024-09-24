@@ -1,3 +1,3 @@
 My portfolio
 
-https://github.com/shrestha-ashwin/Portfolio
+https://shrestha-ashwin.github.io/Portfolio/
